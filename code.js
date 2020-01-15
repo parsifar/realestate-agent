@@ -15,3 +15,14 @@ setInterval(function () {
         i = 0
     }
 }, 4000)
+
+// Featured Section Carousel
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    margin: 10,
+    nav: true,
+    items: 1,
+    dots: false,
+})
