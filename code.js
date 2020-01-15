@@ -1,3 +1,37 @@
+// slide down nav
+var lastScrollTop = 0;
+var menuIsVisible = false;
+
+$(window).on('scroll', function () {
+    st = $(this).scrollTop();
+    if (st < lastScrollTop && st > 0 && menuIsVisible == false) {
+        $(".top-header").css({ position: 'fixed', top: 0, background: 'var(--grey)', display: 'none', animation: 'none', width: '100%' })
+        $(".top-header").slideDown("fast")
+        menuIsVisible = true;
+
+    }
+    else if (st > lastScrollTop && menuIsVisible == true) {
+        $(".top-header").slideUp("fast", function () {
+            $(".top-header").css({ position: 'relative', top: 0, background: 'none', display: 'flex' })
+        })
+
+        menuIsVisible = false;
+
+    }
+
+    else {
+        if (st < lastScrollTop && st == 0) {
+            $(".top-header").fadeOut("fast", function () {
+                $(".top-header").css({ position: 'relative', top: 0, background: 'none', display: 'flex' })
+            })
+
+            menuIsVisible = false;
+        }
+    }
+    lastScrollTop = st;
+});
+
+
 // Changing headings
 let title1 = document.querySelector(".cta-div .line-one")
 let title2 = document.querySelector(".cta-div .line-two")
