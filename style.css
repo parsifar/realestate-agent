@@ -31,7 +31,7 @@ body{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    height:100px;
+    height:80px;
     padding:0 2em;
     position: relative;
     z-index: 15;
@@ -320,6 +320,7 @@ footer .fa-phone{
 .about-page .first-section{
     height:500px;
     background: url(/images/brick.jpg);
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -357,4 +358,93 @@ footer .fa-phone{
 .about-page .second-section p{
     line-height: 1.8;
     margin-bottom: 1rem;
+}
+/* CONTACT MODAL */
+.contact-modal{
+    position:fixed;
+    top:-100vh;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.85);
+    color:white;
+    z-index: 20;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition:transform 500ms ease-in-out;
+}
+#contact-close-btn{
+    position:absolute;
+    top:3rem;
+    right:3rem;
+    color:white;
+    background: none;
+    border:none;
+    font-size: 3rem;
+    font-weight: 200;
+    padding:1rem;
+    cursor: pointer;
+
+}
+.contact-modal h1{
+    font-size: 5rem;
+    font-weight: 200;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+.contact-modal .wrapper{
+    display:flex;
+    max-width: 1200px;
+    width:80vw;
+    margin:2rem auto;
+}
+.contact-modal .contact-col-1,
+.contact-modal .contact-col-2{
+    flex-basis: 50%;
+    padding:2rem;
+}
+.contact-modal .contact-col-1{
+    display: flex;
+    flex-direction: column;
+
+}
+.contact-modal .contact-col-1 input,
+.contact-modal .contact-col-1 select{
+    padding:1rem;
+    margin:5px;
+    height:3rem;
+}
+.contact-modal .contact-col-1 textarea{
+    padding:1rem;
+    margin:5px;
+}
+
+.contact-modal .contact-col-1 button{
+    width:150px;
+    background: none;
+    color:white;
+    padding:1rem;
+    margin:2rem auto;
+    border:2px solid white;
+}
+.contact-modal .contact-col-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.contact-modal .contact-details p{
+    padding:.8rem;
+    letter-spacing: 2px;
+}
+.contact-modal .contact-col-2 i{
+    color:white;
+    font-size: 2rem;
+    padding:1rem;
+    transition:transform 300ms;
+}
+.contact-modal .contact-col-2 i:hover{
+    color:rgb(68, 68, 198);
+    transform: scale(1.2);
 }

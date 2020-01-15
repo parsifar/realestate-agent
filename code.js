@@ -60,3 +60,11 @@ $('.owl-carousel').owlCarousel({
     items: 1,
     dots: false,
 })
+
+// CONTACT MODAL
+$("#nav-contact-btn").on("click", function () {
+    $(".contact-modal").css({ transform: 'translateY(100vh)' })
+})
+$("#contact-close-btn").on("click", function () {
+    $(".contact-modal").css({ transform: 'translateY(-100vh)' })
+})
