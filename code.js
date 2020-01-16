@@ -31,6 +31,14 @@ $(window).on('scroll', function () {
     lastScrollTop = st;
 });
 
+// MOBILE MENU
+$("#mobile-menu-btn").on("click", function () {
+    $(".mobile-menu-modal").css({ left: 0 })
+})
+$("#mobile-menu-close-btn").on("click", function () {
+    $(".mobile-menu-modal").css({ left: "100vw" })
+})
+
 
 // Changing headings
 let title1 = document.querySelector(".cta-div .line-one")
@@ -63,8 +71,8 @@ $('.owl-carousel').owlCarousel({
 
 // CONTACT MODAL
 $("#nav-contact-btn").on("click", function () {
-    $(".contact-modal").css({ transform: 'translateY(100vh)' })
+    $(".contact-modal").css({ transform: 'translateY(130vh)' })
 })
 $("#contact-close-btn").on("click", function () {
-    $(".contact-modal").css({ transform: 'translateY(-100vh)' })
+    $(".contact-modal").css({ transform: 'translateY(-130vh)' })
 })
