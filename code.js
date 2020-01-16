@@ -38,6 +38,9 @@ $("#mobile-menu-btn").on("click", function () {
 $("#mobile-menu-close-btn").on("click", function () {
     $(".mobile-menu-modal").css({ left: "100vw" })
 })
+$(".mobile-nav-item").on("click", function () {
+    $(".mobile-menu-modal").css({ left: "100vw" })
+})
 
 
 // Changing headings
@@ -75,4 +78,7 @@ $("#nav-contact-btn").on("click", function () {
 })
 $("#contact-close-btn").on("click", function () {
     $(".contact-modal").css({ transform: 'translateY(-130vh)' })
+})
+$("#mobile-nav-contact-btn").on('click', function () {
+    $(".contact-modal").css({ transform: 'translateY(130vh)' })
 })
